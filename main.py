@@ -8,9 +8,8 @@ while True:
           "3. Calcular la ventas mas alta y mas baja\n"
           "4. Calcular promedio de ventas\n"
           "5. Contar cuantos dias superaron los Q. 1000\n"
-          "6. Buscar si una venta existe\n"
-          "7. Clasificar venta\n"
-          "8. Salir")
+          "6. Clasificar venta\n"
+          "7. Salir\n")
     select = input("Selecciona una opcion: ")
     match select:
         case "1":
@@ -27,13 +26,18 @@ while True:
                     case "2":
                         print("Regresando al menu")
                         break
+                    case _:
+                        print("Ingrese una opcion valida")
         case "2":
             print(f"\n{ventas}\n"
                   f"")
         case "3":
             for i in ventas:
-                print(f"Venta mas alta: ")
-
-        case "8":
+                print(f"Venta mas alta: {max(ventas)}\n"
+                      f"venta mas baja: {min(ventas)}\n ")
+        case "4":
+            print(f"el promedio de ventas es: Q. {sum(ventas)/len(ventas)}\n"
+                  f"")
+        case "7":
             print("Saliendo")
             break
