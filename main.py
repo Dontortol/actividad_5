@@ -2,7 +2,8 @@ ventas = []
 
 while True:
     print("Menu de analisis de ventas")
-    print("1. Ingresar lista de ventas\n"
+    print("1. Ingresar lis"
+          "ta de ventas\n"
           "2. Mostrar todas las ventas ingresadas\n"
           "3. Calcular la ventas mas alta y mas baja\n"
           "4. Calcular promedio de ventas\n"
@@ -22,11 +23,17 @@ while True:
                     case "1":
                         sell = int(input("Ingresar precio de venta: "))
                         ventas.append(sell)
+                        print("Venta agregada")
                     case "2":
                         print("Regresando al menu")
                         break
         case "2":
-            print(f"\nventas")
+            print(f"\n{ventas}\n"
+                  f"")
+        case "3":
+            for i in ventas:
+                print(f"Venta mas alta: ")
+
         case "8":
             print("Saliendo")
             break
